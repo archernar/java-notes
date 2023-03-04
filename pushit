@@ -1,0 +1,13 @@
+#!/bin/bash                                                                                          
+Tmp=/tmp/$$                                                                                              
+trap 'exit 0' INT HUP QUIT TERM ALRM USR1                                                                
+trap 'rm -f "$Tmp"' EXIT                                                                         
+rm -f "$Tmp"  >/dev/null 2>&1     
+
+#-------------------------------------------------------------------------------------
+git add README.md
+git add pushit
+git commit --quiet -m "Update"
+git push --quiet -u origin master
+#-------------------------------------------------------------------------------------
+
