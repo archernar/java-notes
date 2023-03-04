@@ -11,5 +11,5 @@
      params += ', scrollbars=yes';
      params += ', resizable=yes';
      oldy="toolbar=no,status=no,menubar=yes,location=center,scrollbars=yes,resizable=yes,height=60%,width=52%";
-     $("#footer").html("Orignally sourced from Fred Swartz&apos;s public domain site <a href='http://www.fredosaurus.com/notes-java/index.html'>Java Notes</a>");
+     $("#footer").html("Many elements orignally sourced from Fred Swartz&apos;s public domain site <a href='http://www.fredosaurus.com/notes-java/index.html'>Java Notes</a>");
     }
