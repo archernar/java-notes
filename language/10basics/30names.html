@@ -1,0 +1,116 @@
+<?xml version="1.0"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="author" content="Fred Swartz (www.fredswartz.com)"/>
+  <meta name="level" content="1"/>
+  <link rel="stylesheet" type="text/css" href="../../notes.css"/>
+  
+  <script src=https://code.jquery.com/jquery-1.12.4.js></script>
+  <script src=https://code.jquery.com/ui/1.12.1/jquery-ui.js></script>
+  <script src=../../sitewide.js></script>
+
+  <script type='text/javascript'>
+
+      $( document ).ready(function() {
+           siteWide();
+      });
+
+  </script>
+
+
+
+  <title>Java: Identifier Names</title>
+</head>
+<body><div id="content">
+
+<h1 class="title"><a href="../../index.html">Java Notes</a></h1><h1>Identifier Names</h1>
+
+<p>Getting the names of things right is extremely important.  It makes a huge
+difference in readability.  Many IDEs support <i>refactoring</i>, and specifically
+renaming.  I will sometimes rename classes several times before I hit on exactly
+the obvious name.  It's worth the effort.
+</p>
+
+
+<h2>Legal Characters</h2>
+
+<p>Every name is made from the following characters, starting with a letter:</p>
+<ul>
+<li>Letters: a-z, A-Z, and other alphabetic characters from other languages.</li>
+<li>Digits: 0-9</li>
+<li>Special: _ (underscore).  A single underscore is a reserved keyword as of Java 9.</li>
+</ul>
+
+<p>No names can be the same as
+a Java keyword (eg, <tt>import</tt>, <tt>if</tt>, ...).
+</p>
+   
+
+<h2>Examples</h2>
+
+<table cellpadding="0" cellspacing="0" border="0">
+<tr><td><code>apple</code></td>                     <td>This is a legal name.  Lowercase implies it's a variable or method.</td></tr>
+<tr><td><code>Apple</code></td>                     <td>This is a different legal name.  Uppercase implies it's a class or interface.</td></tr>
+<tr><td><code>APPLE</code></td>                     <td>Yet a different legal name.  All uppercase implies it's a constant.</td></tr>
+<tr><td><code>topleft</code></td>                   <td>Legal, but multiple words should be camelcase.</td></tr>
+<tr><td><code>top_left</code>&nbsp;&nbsp;&nbsp;</td><td>Better, but camelcase is preferred to _ in Java.</td></tr>
+<tr><td><code>topLeft</code></td>                   <td>Good Java style</td></tr>
+<tr><td><code>top left</code></td>                  <td>ILLEGAL - no blanks in a name</td></tr>
+<tr><td><code>import</code></td>                    <td>ILLEGAL - same as the Java keyword</td></tr>
+</table>
+
+
+<h2>Using Uppercase, Lowercase, and "Camelcase" Letters</h2>
+<p>The conventions for the use of upper- and lowercase is not enforced by compilers,
+but it is so widely observed, that it should have been.
+<i>Camelcase</i> is the practice of capitalizing the first letter of 
+successive words in multi-word identifiers.  Camelcase is much preferred
+in the Java community over the use of underscores to separate words, or
+even worse, no distinction made at word boundaries.
+</p>
+
+<dl>
+<dt>Class and interface names - Start with uppercase</dt>
+  <dd>Class and interface names start with an uppercase letter,
+    and continue in lowercase.  For multiple words, use <i>camelcase</i>.
+    Eg, Direction, LogicalLayout, DebugGapSpacer.
+    </dd>
+<dt>Variable and method names - Lowercase</dt>
+    <dd>
+    Lowercase is used for variable and method names.
+    If a name has multiple words, use camelcase.
+    Eg, top, width, topLeft, roomWidth, incomeAfterTaxes.
+    </dd>
+<dt>Constants - All uppercase, use _ to separate words</dt>
+    <dd>The names of constants (typically declared <i>static final</i>) should
+    be in all uppercase.  For example, <tt>BorderLayout.NORTH</tt>.
+    When constant names are made from multiple words, use an underscore
+    to separate words, eg, <code>JFrame.EXIT_ON_CLOSE</code>
+    </dd>
+</dl>
+
+
+<h2>Readable names are more important than most comments</h2>
+<p>Java doesn't care if your names are readable, but it's really 
+important to make your names readable to humans.
+</p>
+<p>I once worked on a project where we had to distribute the source code
+so that it could be compiled on another machine, but we didn't want to 
+reveal our algorithms.  We deleted all comments and indentation, and wrote a small program to change
+all variable names to combinations of "I", "1", "O", and "0", figuring that it would be
+too much effort for them to decode it.  For example, the semi-readable
+</p>
+<pre>
+LogicalGapInfo topBorder = m_logicalLayout.getGapInfo(LogicalLayout.AXIS_V, 0);</pre>
+<p>Could be translated into</p>
+<pre>
+I001O I00I0 = O1001.OI001(O1OOI.IO010, 0);</pre>
+
+
+
+<div id="footer" class="footer"></div>
+</div></body>
+</html>
+

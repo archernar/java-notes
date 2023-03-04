@@ -1,0 +1,139 @@
+<?xml version="1.0"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="author" content="Fred Swartz (www.fredswartz.com)"/>
+  <meta name="level" content="1"/>
+  <link rel="stylesheet" type="text/css" href="../../notes.css"/>
+  
+  <script src=https://code.jquery.com/jquery-1.12.4.js></script>
+  <script src=https://code.jquery.com/ui/1.12.1/jquery-ui.js></script>
+  <script src=../../sitewide.js></script>
+
+  <script type='text/javascript'>
+
+      $( document ).ready(function() {
+           siteWide();
+      });
+
+  </script>
+
+
+  <title>Java: Packages - Importing</title>
+</head>
+<body><div id="content">
+
+<h1 class="title"><a href="../../index.html">Java Notes</a></h1><h1>Packages - Importing</h1>
+
+
+<p><b>Packages = directories.</b>
+Multiple classes of larger programs are grouped 
+together into a <i>package</i>.  Packages correspond to
+directories in the file system, and may be nested just
+as directories are nested.  Small, single-class, programs
+typically do not use packages, but a
+</p>
+
+<h2>Importing all classes from a package using *</h2>
+<p>Java libraries are organized in packages (directories).
+The most common way to get access to them is to use the
+<code>import</code> statement.
+For example,</p>
+<pre class="fragment"><span class="hiliteu">import java.util.*;</span>
+. . .
+ArrayList&lt;String&gt; studentNames;  // ArrayList is a class in java.util</pre>
+
+<p>
+gives your program access to the all (that's what the "*" means)
+classes in the package <code>java.util</code>.
+The source files for these classes are in a directory named
+<code>util</code>, which is in a directory named <code>java</code>.
+</p>
+
+<h2>Importing each class explicitly</h2>
+<p>
+If you need only one class from a package, eg <code>ArrayList</code>, you can write
+</p>
+<pre class="fragment">import java.util.<span class="hiliteu">ArrayList</span>;
+. . .
+ArrayList&lt;String&gt; studentNames;  // same as above.</pre>
+
+
+<p>You might think that importing all classes from a package is inefficient,
+but there is no noticeable difference in my experience.  
+Consequently most programs use the ".*" style of import. 
+</p>
+
+
+<h2>Using package qualifiers instead of imports</h2>
+<p>The <code>import</code> statement is not required. 
+Class references can be made but explicit qualification with the "."
+operator.  For example,
+</p>
+<pre class="fragment"><span class="hiliteu">java.util.ArrayList</span>&lt;String&gt; studentNames; // fully qualified.  No need for import.</pre>
+
+<p>The fully qualified style is used in some textbooks, 
+but is generally not used when programming, where the 
+import style is almost universal. 
+</p>
+<p>
+However, there is one situation where qualification is 
+<i>necessary</i> - when two classes have the same name,
+but are in different packages.  For example, there is both
+<code>java.util.Timer</code> and <code>java.swing.Timer</code>.
+Because it's common to import all classes in both <code>java.util</code>
+and <code>javax.swing</code>, the name <code>Timer</code> is ambiguous and 
+can't be used without qualification.  
+</p>
+<pre class="fragment">import java.util.*;    // The java.util package contains a Timer class.
+import javax.swing.*;  // The javax.swing package also contains a Timer class.
+. . .
+<s>Timer t;</s>            // AMBIGUOUS - compilation error
+java.util.Timer t;  // OK, you've told the compiler which one you want.</pre>
+
+
+
+<h2>Packages within packages require additional imports</h2>
+<p>The import statement gives access to classes in a package, 
+but not to packages in that package.  For example, 
+</p>
+
+<pre class="fragment">import java.util.*;</pre>
+
+<p>does not give access to the classes of the package <code>java.util.regex</code>.
+To access classes in <code>java.util</code> and
+<code>java.util.regex</code>, import both.
+</p>
+
+<pre class="fragment">import java.util.*;
+import java.util.regex.*;</pre>
+   
+   
+
+<h2>Java's <code>import</code> is not the same as C++'s <code>#include</code></h2>
+<p>C++'s <code>#include</code> is commonly used to for library headers,
+but the mechanism which is used is fundamentally different.  
+<code>#include</code> inserts the entire <i>source file</i> that is referenced into
+your C++ program.
+In contrast, the Java <code>import</code> statement only looks up the 
+the identifiers and their declarations from the <i>compiled class file</i> (not the 
+source files).
+</p>
+
+<p>Another difference is that Java imports are <i>non-transitive</i>.  
+If class A imports <code>packagex</code> and <code>packagex</code>
+imports <code>packagey</code>, class A does NOT get access to <code>packagey</code>.
+In C++, the imports are transitive, which can lead to some unexpected effects.
+</p>
+
+<p>A minor difference is that Java's <code>import</code> is a statement and
+requires a semicolon, unlike C++.
+</p>
+
+<div id="footer" class="footer"></div>
+
+</div>
+</body>
+</html>
+

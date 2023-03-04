@@ -1,0 +1,153 @@
+<?xml version="1.0"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="author" content="Fred Swartz (www.fredswartz.com)"/>
+  <meta name="level" content="2"/>
+  <link rel="stylesheet" type="text/css" href="../../notes.css"/>
+  
+  <script src=https://code.jquery.com/jquery-1.12.4.js></script>
+  <script src=https://code.jquery.com/ui/1.12.1/jquery-ui.js></script>
+  <script src=../../sitewide.js></script>
+
+  <script type='text/javascript'>
+
+      $( document ).ready(function() {
+           siteWide();
+      });
+
+  </script>
+
+
+  <title>Java: Packages - Defining</title>
+</head>
+<body><div id="content">
+
+<h1 class="title"><a href="../../index.html">Java Notes</a></h1><h1>Packages - Defining</h1>
+
+<p><b>Package = directory</b>.  Multiple classes of larger programs are usually grouped 
+together into a <i>package</i>.  Packages correspond to
+directories in the file system, and may be nested just
+as directories are nested.
+</p>
+
+<h2>Reasons to use packages</h2>
+<ul>
+<li>Grouping related classes.</li>
+<li>In large programs prevents name conflicts.</li>
+<li>Allows effective use of default "package" visibility.</li>
+<li>Creates a unique class name for distribution, Preferences, ...</li>
+</ul>
+
+<p><b>Grouping related classes.</b>
+If you are writing a normal one-programmer application, it will typically be in one package.  
+The purpose of a package is to group all related classes together.
+If you are working on a program that is divided into separate
+sections that are worked on by others, each section might be
+in its own package.  This prevents class name conflicts and reduces coupling by 
+allowing package scope to be used effectively.
+</p>
+<p><b>Library in package</b>.
+If you're writing a library to use in various programming projects 
+or by others, put it in its own package.  Programs that use this library 
+will be developed in their own packages.
+With its thousands of library classes, Java has grouped related library classes 
+into packages, but usually you won't define more than one package.
+</p>
+
+<h3>Summary of how many packages you usually define</h3>
+<ul>
+<li>Normal programs = one package.</li>
+<li>Library = one package.</li>
+<li>Program + library = two packages.</li>
+</ul>
+
+
+<h2>Reasons for using packages</h2>
+<ul>
+<li>Limit the scope of class names.</li>
+<li>To make package access more usable.</li>
+</ul>
+
+
+<h2>Package declarations</h2>
+<p>Each file may have a <code>package</code> declaration which
+precedes all non-comment code.  The package name
+<i>must be the same</i> as the enclosing directory.
+</p>
+<p><b>Default package</b>.  If a package declaration is omitted, 
+all classes in that directory are said to belong to the 
+"default" package.
+</p>
+<p>
+Here are two files in the <code>packagetest</code> directory.
+</p>
+<pre class="file">
+<span class="hiliteu">package packagetest;</span>
+
+class ClassA {
+    public static void main(String[] args) {
+        ClassB.greet();
+    }
+}</pre>
+and
+<pre class="file">
+<span class="hiliteu">package packagetest;</span>  // Same as in previous file.
+
+class ClassB {
+    static void greet() {
+        System.out.println("Hi");
+    }
+}</pre>
+
+<p>Note that these source files must be named <code>ClassA.java</code>
+and <code>ClassB.java</code> (case matters)
+and they must be in a directory named <code>packagetest</code>.
+</p>
+
+<!--
+<h2>Package scope</h2>
+In the above example ClassA and ClassB were declared with default scope,
+commonly known as <i>package</i> scope (as opposed to 
+<code>public</code>, <code>private</code>, or <code>protected</code>.
+[TO DO - more explanation] 
+-->
+
+   
+<h2>Compiling and running packages from a command line</h2>
+<p>To compile the above example, you must be <i>outside</i> the
+<code>packagetest</code> directory.  
+To compile the classes:
+</p>
+<pre>
+   javac packagetest/ClassB.java
+   javac packagetest/ClassA.java</pre>
+To run the <code>main</code> program in <code>ClassA</code>.
+<pre>
+   java packagetest.ClassA</pre>
+   or
+<pre>
+   java packagetest/ClassA</pre>
+   
+<p>In windows the "/" can be replaced by the "\" in the <code>javac</code>
+command, but not in the <code>java</code> command.
+Generally use a forward slash ("/") because it is used
+more commonly than the backslash in other places as well.
+</p>
+
+<!-- 
+If you've been developing small programs, you didn't have to worry about grouping all your files. A "package" corresponds to a directory, and they are sometimes nested for a large number of files, like the Java library. If you look at the Java library source code, you'll find a directory called "java". In that directory, you'll find a "util" directory (the java.util package) which contains all the classes in this package (Scanner, ArrayList, etc), an "awt" directory (java.awt package), etc.
+
+The other reason to define packages is to make your fully qualified class names completely unique. Java recommends using a reversed domain name. I own the domain name fredswartz.com, so I often use the package name com.fredswartz, at least for any programs that I'm moderately serious about.
+
+Sun recommends strongly that you use packages for your programs -- I believe this is because it's difficult to do some things if they aren't in a package, or at least it's more convenient (eg, Preferences). Nothing you'd use for a small program, but it becomes important for larger programs.
+
+
+
+-->
+
+<div id="footer" class="footer"></div>
+</div></body>
+</html>
+

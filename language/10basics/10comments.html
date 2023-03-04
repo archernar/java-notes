@@ -1,0 +1,112 @@
+<?xml version="1.0"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="level" content="1"/>
+  <link rel="stylesheet" type="text/css" href="../../notes.css"/>
+
+  <script src=https://code.jquery.com/jquery-1.12.4.js></script>
+  <script src=https://code.jquery.com/ui/1.12.1/jquery-ui.js></script>
+  <script src=../../sitewide.js></script>
+
+  <script type='text/javascript'>
+
+      $( document ).ready(function() {
+           siteWide();
+      });
+
+  </script>
+
+
+  <title>Java: Comments</title>
+</head>
+<body><div id="content">
+
+<h1 class="title"><a href="../../index.html">Java Notes</a></h1><h1>Comments</h1>
+
+<p><span class="leadin">Computer programs are read by both computes and humans</span>.
+   You write Java instructions
+   to tell the computer what to do.  You must also write 
+   <b class="color">comments</b> to explain to humans what
+   the program does.  Of course, Java can't understand
+   them because they are written in English, or Spanish, or Thai, or ... .
+   </p>
+   
+   <p><b class="color">Java ignores all comments</b>.
+   There is, however, a program called javadoc which reads certain
+   kinds of comments and produces HTML documentation (see below).
+   </p>
+   
+   
+<h2>Spaces and blank lines</h2>
+<p>One of the most effective ways to make a program readable is to put
+spaces in at key points.  There are several styles for doing this.
+Even more important is to put blank lines in your program.  These
+should separate sections of code.  There should be a blank line
+between each "paragraph" of code.
+By paragraph, I mean a group of statements that belong together logically;
+there is no Java concept of paragraph.
+</p>
+
+
+<h2>Java comments</h2>
+<dl>
+<dt>// comments -- one line</dt>
+      <dd>
+      After the two <b class="color"><code>//</code></b> characters, 
+      Java ignores everything to the end of the line.  This is the most
+      common type of comment.
+      <pre class="example">
+      //--- local variables ---
+      int nquest;  // number of questions.
+      int score;   // count of number correct minus number wrong.
+      </pre>
+      </dd>
+       
+<dt>/* ... */ comments -- multiple lines</dt>
+   <dd>
+   After the <b class="color"><code>/*</code></b> characters, 
+   Java will ignore everything until it
+   finds a <b class="color"><code>*/</code></b>.
+   This kind of comment can cross many lines, and is commonly used
+   to "comment out"
+   sections of code -- making Java code into a comment while debugging
+   a program.  For example,
+   <pre>
+   /* Use comments to describe variables or sections of the program.
+      They are very helpful to everyone who reads your programs:
+      your teacher, your boss, but especially yourself!
+   */</pre>
+   </dd>
+
+<dt>javadoc comments</dt>
+   <dd>
+   Comments that start with <b class="color"><code>/**</code></b>
+   are used
+   by the <code>javadoc</code> program to produce HTML documentation for the program.
+   The Java documentation from Sun Microsystems is produced using javadoc.
+   It is essential to use this kind of comment for large programs.
+   </dd>
+</dl>
+
+   
+<h2>Best Practices</h2>
+<ul>
+<li>Don't write comments to document obvious statements.
+    Assume the reader knows Java.
+    </li>
+<li>Every comment has the potential to create an inconsistency
+    between what the comment says, and what the code does.
+    One cause of "software rot" is that code is changed over
+    time, but comments are not updated.  To avoid this, keep
+    comments next to the code that is documented so that they
+    may be more easily synchronized.
+    </li>
+</ul>
+
+
+<div id="footer" class="footer"></div>
+</div></body>
+</html>
+
