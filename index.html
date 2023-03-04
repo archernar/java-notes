@@ -1,0 +1,307 @@
+<?xml version="1.0"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+
+<meta http-equiv="refresh" content="2" >
+
+    <style type="text/css">
+      /* td {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: px;}
+      a          {              font-size: 16px; font-weight: bold;   font-family: Verdana, Arial, Helvetica, sans-serif;} 
+      */
+
+      body       {              font-size: 14px; font-weight: normal; font-family: Verdana, Arial, Helvetica, sans-serif;} 
+
+      a, a:link,a:visited { color: Black; text-decoration: none; }
+      a:hover { color: Black; text-decoration: underline; }
+      ul         {margin-left: 2.5em; padding: 0;}
+      li         {              font-size: 14px; font-weight: normal; margin-top: 0.1em; padding-left: 0.5em;} 
+      /*
+      li li      {              font-size: 14px; font-weight: normal; font-family: Verdana, Arial, Helvetica, sans-serif; margin-top: 0.1em; padding-left: 0.51em;} 
+      li li li   {              font-size: 14px; font-weight: normal; font-family: Verdana, Arial, Helvetica, sans-serif; color: green;} 
+      li li li li{              font-size: 14px; font-weight: normal; font-family: Verdana, Arial, Helvetica, sans-serif; color: green;} 
+      */
+      h2         {background: #FFFFFF; margin:0;padding:0;  margin-top:0.5em;  margin-bottom: 0; margin-left: -1.3em; padding-left -10em; font-size: 14px; }
+      h3         {background: #DDD; padding: 0em; margin-bottom: 1.5em; }
+    </style>
+    <title>Java Programming Notes</title>
+
+  <script src=https://code.jquery.com/jquery-1.12.4.js></script>
+  <script src=https://code.jquery.com/ui/1.12.1/jquery-ui.js></script>
+  <script src=sitewide.js></script>
+
+  <script type='text/javascript'>
+
+      $( document ).ready(function() {
+           siteWide();
+      });
+
+  </script>
+
+
+</head>
+<body><div id="content">
+
+<h1 style="font-family: 'Trebuchet MS' , 'Lucida Grande' , Verdana, Lucida, Geneva, Helvetica, Arial, sans-serif;">Java Notes: Table of Contents</h1>
+
+<p><b><i>Java Notes</i></b>.  These Java programming notes are written to fill in missing or weak topics in textbooks that 
+   I've taught from.  Many pages are useful for reference, but not as an ordered tutorial.
+   Some pages are still rough drafts, and I haven't been working on them for a long time.
+   </p>
+<p><i>Public domain, not copyrighted</i> -
+        All text and source code 
+       is placed in the public domain, although not all page footers have been changed
+       to reflect that.
+       </p>
+    
+<div style="font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 10px;">
+<table border="2" cellspacing="4" cellpadding="4">
+<tr valign="top">
+<td>
+    <h3>Intro</h3>
+        <ul>
+        <li><a href="language/10basics/10comments.html">Comments</a></li>
+        <li><a href="principles_and_practices/style/style-practices-summary.html">Coding guidelines</a></li>
+        <li><a href="language/10basics/30names.html">Identifier Names</a></li>
+        <li><a href="language/10basics/import.html">import</a></li>
+        <li><a href="language/10basics/82packages-importing.html">Importing packages</a></li>
+        <li><a href="language/10basics/84packages-defining.html">Defining packages</a></li>
+        <li><a href="principles_and_practices/style/style-practices-summary.html">Coding guidelines</a></li>
+        <li><a href="principles_and_practices/15cohesion.html">Cohesion</a></li>
+        <li><a href="principles_and_practices/20design_by_contract.html">Design By Contract</a></li>
+        <li><a href="principles_and_practices/10techniques.html">Dev Process</a></li>
+        <li><a href="principles_and_practices/iterative/30Interative-incremental-dev.html">Iterative/Incremental Dev</a></li>
+        <li><a href="principles_and_practices/iterative/25working-start.html">Start with working program</a></li>
+        <li><a href="principles_and_practices/40fail-early-fail-often.html">Fail Early, Fail Often</a></li>
+        <li><a href="principles_and_practices/error-processing.html">Error Processing</a></li>
+        <li><a href="principles_and_practices/debugoutput.html">Debugging Output</a></li>
+        <li><a href="oop/oop-terminology.html">OOP Terminology</a></li>
+        </ul>
+</td><td>
+    <h3>Basics</h3>
+        <ul>
+        <li><a href="data/variables/40variables.html">variables</a></li>
+        <li><a href="data/variables/45local-inst-class.html">scoping</a></li>
+        <li><a href="data/variables/60shadow-variables.html">shadow variables</a></li>
+        <li><a href="data/variables/65shadow-this.html">shadowing this</a></li>
+        <li><a href="summaries/summary-arrays1.html">arrays p1</a></li>
+        <li><a href="summaries/summary-arrays2.html">arrays p2</a></li>
+        <li><a href="data/arrays/arrays.html">Arrays</a></li>
+        <li><a href="data/arrays/arrays-library.html">Array methods</a></li>
+        <li><a href="data/arrays/arrays-ex-reverse.html">Reverse an array</a></li>
+        <li><a href="data/arrays/arrays-ex-max.html">Maximum of array</a></li>
+        <li><a href="data/arrays/arrays-ex-mean.html">Average of array</a></li>
+        <li><a href="data/arrays/30arraysExamples.html">Sorting</a></li>
+        <li><a href="data/arrays/arrays-ex-insult-generator.html">Insult Generator</a></li>
+        <li><a href="data/arrays/arrays-2D.html">2-dim arrays</a></li>
+        <li><a href="data/arrays/arrays-2D-2.html">arrays of arrays</a></li>
+        <li><a href="data/arrays/arrays-lev2.html">arrays more</a></li>
+        <br>
+        <li><a href="oop/interfaces/interfaces.html">Interfaces</a></li>
+        <li><a href="oop/interfaces/interface-ex-handyperson.html">Handyperson</a></li>
+        <br>
+        <li><a href="data/basic_types/integers/integers.html">Integers</a></li>
+        <li><a href="data/basic_types/22floatingpoint.html">Floating-point</a></li>
+        <li><a href="summaries/summary-character.html">Character</a></li>
+        <li><a href="data/basic_types/characters/unicode.html">Unicode</a></li>
+        <li><a href="data/basic_types/26boolean.html">Boolean</a></li>
+        <li><a href="data/basic_types/autoboxing.html">Autoboxing</a></li>
+        <li><a href="oop/enums/enums.html">Enums</a></li>
+        <br>
+        <li><a href="summaries/summary-data.html">sta</a></li>
+        <li><a href="summaries/20exprsum.html">expressions</a></li>
+        <li><a href="summaries/summary-string.html">String</a></li>
+        <li><a href="summaries/summary-character.html">Character</a></li>
+        <li><a href="summaries/summary-stringbuilder.html">StringBuilder</a></li>
+        </ul>
+</td><td>
+    <h3>Expressions</h3>
+        <ul>
+        <li><a href="data/expressions/01expressions.html">expressions</a></li>
+        <li><a href="data/expressions/precedence.html">precedence</a></li>
+        <li><a href="data/expressions/bitops.html">bitwise operations</a></li>
+        <h2>Assignment</h2>
+        <li><a href="data/expressions/assignment-extended.html">Extended Assignment Ops</a></li>
+        <h2>Comparison</h2>
+        <li><a href="data/expressions/comparison-ops.html">primitives</a></li>
+        <li><a href="data/expressions/comparing-floatingpoint.html">floating point</a></li>
+        <li><a href="data/expressions/22compareobjects.html">Objects</a></li>
+        <li><a href="data/expressions/compareTo.html">compareTo() method</a></li>
+        </ul>
+</td><td>
+    <h3>Strings</h3>
+        <li><a href="data/strings/10stringoverview.html">String Overview</a></li>
+        <li><a href="data/strings/12stringcomparison.html">String Comparison</a></li>
+        <li><a href="summaries/summary-string.html">Summary:String</a></li>
+        <li><a href="data/strings/conversion/num2string.html">Numbers to String</a></li>
+        <li><a href="data/strings/conversion/string2num.html">Strings to Numbers</a></li>
+        <li><a href="data/strings/conversion/anything2string.html">Anything to String</a></li>
+        <li><a href="data/strings/40regular_expressions/05regex.html">Regular Expressions</a></li>
+        <li><a href="data/strings/40regular_expressions/10regex-string.html">String Regex Methods</a></li>
+        <li><a href="data/strings/40regular_expressions/26pattern-matcher.html">Pattern and Matcher</a></li>
+        <li><a href="data/strings/40regular_expressions/regex-language.html">Regex Language</a></li>
+        <li><a href="data/strings/40regular_expressions/regex-examples.html">Regex Examples</a></li>
+        <li><a href="data/strings/40regular_expressions/25sum-regex.html">Full regex summary</a></li>
+        <br>
+        <li><a href="data/strings/55stringTokenizer/10stringtokenizer.html">StringTokenizer</a></li>
+        <li><a href="data/strings/55stringTokenizer/20stringtokdelim.html">Tokenizing Delimiters</a></li>
+        <li><a href="data/strings/55stringTokenizer/TokenizeExpr.java.html">TokenizeExpr.java</a></li>
+        <br>
+        <li><a href="data/strings/96string_examples/example_display_extension.html">Display Extension</a></li>
+        <li><a href="data/strings/96string_examples/example_changeextension.html">Change Extension</a></li>
+        <li><a href="data/strings/96string_examples/example_count.html">Count occurrences</a></li>
+        <li><a href="data/strings/96string_examples/example_countVowels.html">Count vowels</a></li>
+        <li><a href="data/strings/96string_examples/example_isPalindrome.html">Palindrome test</a></li>
+        <li><a href="data/strings/96string_examples/example_replaceWord.html">Replace word</a></li>
+        <li><a href="data/strings/96string_examples/example_SortWords.html">SortWords3.java</a></li>
+        <li><a href="data/strings/96string_examples/example_arrayToString.html">Array to String</a></li>
+        <li><a href="data/strings/96string_examples/example_stringToArray.html">String to tokens</a></li>
+</td><td>
+    <h3>Classes to know</h3>
+        <ul>
+        <li><a href="summaries/summary-scanner.html">Scanner</a></li>
+        <li><a href="summaries/summary-math.html">Math</a></li>
+        <li><a href="summaries/summary-random.html">Random</a></li>
+        <li><a href="summaries/summary-mathrandom.html">Math random</a></li>
+        <li><a href="data/numbers/10biginteger.html">BigInteger</a></li>
+        </ul>
+</td><td>
+    <h3>flow of control</h3>
+    <ul>
+       <li><a href="flow/if/10if-general.html">if</a></li>
+       <li><a href="flow/if/20if-else.html">else not Required</a></li>
+       <li><a href="flow/if/50if-nesting.html">if inside if</a></li>
+       <li><a href="flow/if/60if-elseif.html">else if style</a></li>
+       <li><a href="flow/if/40if-indent.html">indentation</a></li>
+       <li><a href="flow/if/30if-braces.html">use of braces></li>
+       <br>
+       <li><a href="flow/switch/switch-general.html">switch</a></li>
+       <li><a href="flow/loops/loops.html">loops</a></li>
+       <li><a href="flow/loops/while.html">while</a></li>
+       <li><a href="flow/loops/for.html">for</a></li>
+       <li><a href="flow/loops/foreach.html">for-each</a></li>
+    </ul>
+</td><td>
+    <h3>examples</h3>
+        <ul>
+            <li><a href="examples-intro/examples1-sequential/ex-do-nothing.html">First Program</a></li>
+            <li><a href="examples-intro/examples1-sequential/ex-console-hello-earthling.html">Hello Earthling</a></li>
+            <li><a href="examples-intro/examples1-sequential/ex-console-to-leader.html">To your leader</a></li>
+            <li><a href="examples-intro/examples1-sequential/ex-console-capitalize.html">Capitalize</a></li>
+            <li><a href="examples-intro/examples1-sequential/ex-console-kmToMiles.html">Kilometers to Miles</a></li>
+            <li><a href="examples-intro/examples3-loops/ex-console-adding-machine.html">Adding Machine</a></li>
+            <li><a href="examples-intro/examples3-loops/ex-console-max-min-avg-income.html">Max, min, avg</a></li>
+            <li><a href="data/numbers/60factorial.html">Factorial</a></li>
+        </ul>
+
+</td><td>
+
+<h3>Algorithms</h3>
+    <ul>
+        <li><a href="algorithms/big-oh/bigoh.html">Big-Oh Notation</a></li>
+        <li><a href="data/collections/comparators.html">Comparators</a></li>
+        <li><a href="algorithms/copying/deep-shallow-copy.html">Deep vs Shallow Copies</a></li>
+        <li><a href="algorithms/copying/clone.html">clone()</a></li>
+        <li><a href="algorithms/searching/search-overview.html">Search overview</a></li>
+        <li><a href="algorithms/searching/search-linear.html">Linear search</a></li>
+        <li><a href="algorithms/searching/search-binary.html">Binary search</a></li>
+        <li><a href="algorithms/searching/search-binary-recursive.html">Recursive binary search</a></li>
+        <li><a href="data/collections/collections_class.html">Collections Class</a></li>
+        <li><a href="algorithms/sorting/sort-overview.html">Sort overview</a></li>
+        <li><a href="algorithms/sorting/sort-selection.html">Selection sort</a></li>
+        <li><a href="algorithms/sorting/sort-bubble.html">Bubble sorts</a></li>
+        <li><a href="algorithms/sorting/sort-library.html">Sort library</a></li>
+        <li><a href="algorithms/random/random-background.html">Random numbers - intro</a></li>
+        <li><a href="algorithms/random/random-api.html">Random numbers - API</a></li>
+        <li><a href="algorithms/random/random-shuffling.html">Shuffling</a></li>
+        <li><a href="summaries/60mathsum.html">Math and java.util.Random</a></li>
+   </ul>
+
+</td><td>
+<h3>Collections</h3>
+        <ul>
+            <li><a href="data/collections/05collections.html">Java Data Structures</a></li>
+            <li><a href="data/collections/06overview.html">Collections Overview</a></li>
+            <li><a href="data/collections/10collection_interface.html">Collection Interface</a></li>
+            <h2>Lists</h2>
+            <li><a href="data/collections/lists/arraylist.html">ArrayList&lt;E&gt;</a>
+            <li><a href="data/collections/lists/ex-alphabetize.html">Alphabetize</a></li>
+            <li><a href="data/collections/lists/vectors.html">Vector&lt;E&gt;</a></li>
+            <li><a href="data/collections/lists/simple-linked-list.html">Simple Linked Lists</a></li>
+
+            <h2>Deques</h2>
+            <li><a href="data/collections/deques/arraydeque.html">ArrayDeque&lt;E&gt;</a></li>
+
+            <h2>Sets</h2>
+            <li><a href="data/collections/sets/sets.html">Set&lt;E&gt; interface</a></li>
+            <h2>Maps</h2>
+            <li><a href="data/collections/maps/map_interface.html">Map&lt;K, V&gt; interface</a></li>
+            <li><a href="data/collections/maps/map_iteration.html">Map iteration</a></li>
+            <li><a href="data/collections/maps/ex-wordfreq.html">WordFrequency</a></li>
+            
+            <h2>Iterators</h2>
+            <li><a href="data/collections/iterators.html">Iterators</a></li>
+
+            <h2>Other</h2>
+            <li><a href="data/collections/classorinterface.html">Class or Interface</a></li>
+            <li><a href="data/collections/generics.html">Generics</a></li>
+            <li><a href="data/collections/ds-alternatives.html">Alternative Data Structures</a></li>
+            <li><a href="io/io-console/console.html">Console I/O</a></li>
+            <li><a href="io/io-console/console-dialog-comparison.html">Console vs Dialog I/O</a></li>
+            <li><a href="io/20internet/10readpage.html">Read page from Web server</a></li>
+            <li><a href="io/formatted_output/formatted_output.html">Formatted Output</a></li>
+            <li><a href="http://www.fredosaurus.com/JavaBasics/index.html">Java Basics</a></li>
+            <li><a href="background/01preface.html">Preface</a></li>
+            <li><a href="oop/constructors/constructor.html">Constructors</a></li>
+            <li><a href="oop/constructors/constructor-super.html">Constructors - super</a></li>
+            <li><a href="oop/constructors/constructor-super-example.html">Constructors - super example</a></li>
+            <li><a href="oop/constructors/q-fi-constructor-chaining.html">Exercise: Constructor Chaining</a></li>
+            <li><a href="oop/comparison/comparison-overview.html">Comparison overview</a></li>
+            <li>Overriding equals()</li>
+            <li>Overriding hashcode()</li>
+            <li>Implementing Comparable</li>
+            <li><a href="other/90introspection/10classclass.html">Class class</a></li>
+            <h2>Exercises</h2>
+            <li><a href="data/collections/exercises/q-collections-1.html">Unique Components</a></li>
+            <li><a href="data/collections/exercises/q-collections-2.html">State Capitals</a></li>
+         </ul>
+</td><td>
+
+    <h3>Other</h3>
+    <ul>
+    <h2>Exceptions</h2>
+    <li><a href="flow/exceptions/01exceptions.html">Exceptions</a></li>
+    <li><a href="flow/exceptions/02exceptions.html">Exception Usage</a></li>
+    <li><a href="flow/exceptions/03exceptions.html">Exceptions - More</a></li>
+    <li><a href="flow/exceptions/throwing-exceptions.html">Throwing Exceptions</a></li>
+
+    <h2>Methods</h2>
+    <li>See <span style="background: #9f9"><a href="http://www.fredosaurus.com/JavaBasics/index.html">Java Basics</a></span></li>
+    <li><a href="flow/methods/15methodex.html">Methods - Example</a></li>
+    <li><a href="flow/methods/50static-methods.html">Static methods</a></li>
+    <li><a href="flow/methods/ex-methods-loops.html">Example methods and loops</a></li>
+    <h2>Other</h2>
+    <li><a href="summaries/70dossum.html">DOS Commands</a></li>
+    <li><a href="flow/assertions/assertions.html">Assertions</a></li>
+    <h2>Misc summaries</h2>
+    <li><a href="summaries/summary-intro-prog.html">Summary:Intro Programming</a></li>
+    <li><a href="summaries/summary-basics.html">Basic Elements</a></li>
+    <li><a href="summaries/summary-packages.html">Packages</a></li>
+    <li><a href="summaries/summary-scanner.html">Scanner</a></li>
+    <li><a href="summaries/summary-math.html">Math class</a></li>
+    <li><a href="summaries/summary-random.html">Random numbers</a></li>
+    <li><a href="summaries/summary-stringbuilder.html">StringBuilder</a></li>
+    <li><a href="data/strings/40regular_expressions/25sum-regex-basic.html">Basic regex</a></li>
+    <li><a href="summaries/summary-control-flow.html">Control Flow</a></li>
+</ul>
+<!-- end Control Flow -->
+</td>
+</tr>
+</table>
+
+</div>
+</div>
+<div id="footer" class="footer"></div>
+</body>
+</html>
+
